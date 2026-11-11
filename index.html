@@ -4,37 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mobiledger</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-        <h1>MobiLedger</h1>
-    </nav>
-    <br>
-    <div>
-        <div>
-            <h3>Current Balance</h3>
-            <p id="balance">Mwk 0.00</p>
-            <button id="reset_button">reset balance</button>
-            <br>
-        </div>
-        <h3>Deposit Money</h3>
-        <form>
-            <label for="deposit_input">Amount to deposit (MWK)</label>
-            <input type="number" name="Amount" id="deposit_input" min="1" required>
-            <button id="deposit_button">Deposit</button>
-        </form>
-        <h3>Withdraw Money</h3>
-        <form>
-            <label for="withdraw_input">Amount to withdraw (MWK)</label>
-            <input type="number" name="Amount" id="withdraw_input" min="1" required>
-            <button id="withdraw_button">Withdraw</button>
-        </form>
-    </div>
-    <div>
-        <h3>Transaction History</h3>
-        <ul id="transaction_list"></ul>
-    </div>
+    <header>
+        <nav class="nav_bar">
+            <div>
+                <a href="#" class="nav_logo">Mobiledger</a>
+            </div>
+        <ul class="nav_list">
+            <li><a href="#" class="nav_link">Home</a></li>
+            <li><a href="#" class="nav_link">Something</a></li>
+            <li><a href="#" class="nav_link">About</a></li>
+        </ul>
+        </nav>
+    </header>
 
-    <script src="script.js"></script>
+    <main class="container">
+        <div>
+            <div>
+                <h3>Current Balance</h3>
+                <p id="balance">Mwk 0.00</p>
+                <button id="reset_button">reset balance</button>
+            </div>
+            <div class="deposit_box">
+                <h3>Deposit Money</h3>
+                <form>
+                    <label for="deposit_input">Amount to deposit (MWK)</label>
+                    <input type="number" name="Amount" id="deposit_input" min="1" required>
+                    <button id="deposit_button">Deposit</button>
+                </form>
+            </div>
+            <div class="withdraw_box">
+                <h3>Withdraw Money</h3>
+                <form>
+                    <label for="withdraw_input">Amount to withdraw (MWK)</label>
+                    <input type="number" name="Amount" id="withdraw_input" min="1" required>
+                    <button id="withdraw_button">Withdraw</button>
+                </form>
+            </div>
+        </div>
+        <div class="transaction_list">
+            <h3>Transaction History</h3>
+            <ul id="transaction_list"></ul>
+        </div>
+
+        <script src="script.js"></script>
+    </main>
 </body>
 </html>

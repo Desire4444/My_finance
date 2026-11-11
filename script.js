@@ -21,6 +21,13 @@ function renderTransactions(){
     transactions.forEach(item => { 
         const li = document.createElement("li");
         li.textContent = `${item.type}: Mwk ${item.amount.toFixed(2)} (${item.date})`;
+        
+        if(item.type === "Deposit"){
+            li.classList.add("deposit");
+        }
+        else{
+            li.classList.add("withdraw")
+        }
         transactionListDisplay.appendChild(li);
     });
 }

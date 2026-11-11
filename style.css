@@ -1,0 +1,73 @@
+.deposit {
+    color: #2e7d32; /* A nice forest green */
+    font-weight: 500;
+}
+
+.withdraw {
+    color: #c62828; /* A clean crimson red */
+    font-weight: 500;
+}
+
+* {
+    box-sizing: border-box;
+    /* margin: 0; */
+}
+
+body{
+    font-family: 'inter', sans-serif;
+    background: #FAD2CF;
+}
+
+.nav_logo{
+    display: flex;
+    font-size: 1.8rem;
+    letter-spacing: .1px;
+    color: blueviolet;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.2s ease-in-out;
+}
+
+.nav_logo:hover {
+  color: #f1631ccf;
+  transform: scale(1.1);
+}
+
+.nav_bar{
+    display: flex;
+    background: aqua;
+    z-index: 10;
+    border-radius: 10px;
+    padding: .8rem;
+    top: 0;
+    position: sticky;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    box-shadow: 0 2px 6px rgba(0,0,0,.2);
+}
+
+.nav_list{
+    display: flex;
+    gap: .2rem;
+    list-style: none;
+    flex-wrap: nowrap;
+}
+
+.nav_list a{
+    display: block;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.transaction_list{
+    font-family:'Times New Roman', Times, serif;
+}
+
+.deposit_box{
+    background: ;
+}
+
+.container{
+    width: min(1000px, 92%);
+    margin-inline-start: 10px;
+}
