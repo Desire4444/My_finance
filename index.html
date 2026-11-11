@@ -6,12 +6,15 @@
     <title>mobiledger</title>
 </head>
 <body>
-    <h1>MobiLedger</h1>
+    <nav>
+        <h1>MobiLedger</h1>
+    </nav>
     <br>
     <div>
         <div>
             <h3>Current Balance</h3>
-            <p>Mwk 0.00</p>
+            <p id="balance">Mwk 0.00</p>
+            <button id="reset_button">reset balance</button>
             <br>
         </div>
         <h3>Deposit Money</h3>
@@ -20,6 +23,16 @@
             <input type="number" name="Amount" id="deposit_input" min="1" required>
             <button id="deposit_button">Deposit</button>
         </form>
+        <h3>Withdraw Money</h3>
+        <form>
+            <label for="withdraw_input">Amount to withdraw (MWK)</label>
+            <input type="number" name="Amount" id="withdraw_input" min="1" required>
+            <button id="withdraw_button">Withdraw</button>
+        </form>
+    </div>
+    <div>
+        <h3>Transaction History</h3>
+        <ul id="transaction_list"></ul>
     </div>
 
     <script src="script.js"></script>
