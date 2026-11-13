@@ -8,66 +8,139 @@
     font-weight: 500;
 }
 
-* {
-    box-sizing: border-box;
-    /* margin: 0; */
-}
-
 body{
     font-family: 'inter', sans-serif;
-    background: #FAD2CF;
+    background: linear-gradient( to right, #0D9DA4, #0C1446, #2B5C92, #B3CDE0);
+    padding-top: 100px;
 }
 
 .nav_logo{
-    display: flex;
     font-size: 1.8rem;
     letter-spacing: .1px;
     color: blueviolet;
     font-weight: 500;
     text-decoration: none;
-    transition: 0.2s ease-in-out;
+    transition: transform 0.2s ease;
+    background: linear-gradient(to right, #F042FF, #FFC120);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    display: inline-block;
 }
 
 .nav_logo:hover {
-  color: #f1631ccf;
-  transform: scale(1.1);
+    transform: scale(1.15);
+    /* color: #20f11ccf; */
+    background: linear-gradient(to right, #FFC120, #F042FF);
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+
+    display: inline-block;
 }
 
 .nav_bar{
     display: flex;
-    background: aqua;
-    z-index: 10;
-    border-radius: 10px;
-    padding: .8rem;
-    top: 0;
-    position: sticky;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    background: #7226FF;
+    border-radius: 30px;
+    padding: .8rem 2.5rem; /* padding on sides keeps content nicely inset */
+    padding-right: 2.5rem;
     box-shadow: 0 2px 6px rgba(0,0,0,.2);
+    justify-content: space-between;
+    align-items: center; /* Vertically centers the logo and links */
+    position: fixed;
+    top: 10px;           /* Gives a tiny gap from the very top of the screen */
+    left: 10px;          /* Insets it from the left edge */
+    right: 10px;         /* Insets it from the right edge, auto-centering it */
+    height: 60px;
+    z-index: 1000;
+    border: 1px solid #0D9DA4;
 }
 
 .nav_list{
     display: flex;
-    gap: .2rem;
     list-style: none;
     flex-wrap: nowrap;
+    gap: .6rem;
 }
 
 .nav_list a{
     display: block;
     text-decoration: none;
     border-radius: 6px;
+    color: #FFE5F1;
+    transition: 0.3s ease-in-out;
+}
+
+.nav_list a:hover{
+    display: block;
+    text-decoration: none;
+    border-radius: 6px;
+    color: #F1EAB9;
+    background: linear-gradient(to right, #F042FF, #FFC120);
+    /* padding: .1rem; */
+    padding-left: .6rem;
+    padding-right: .6rem;
 }
 
 .transaction_list{
     font-family:'Times New Roman', Times, serif;
+    height: 100%;
 }
 
-.deposit_box{
-    background: ;
+.main_entry_box{
+    display: flex;
+    justify-content: space-between;
+    gap: 5px;
 }
 
-.container{
-    width: min(1000px, 92%);
-    margin-inline-start: 10px;
+.entry_box{
+    background: #f7fcf9;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #c62828;
+    text-align: left;
+    flex: 1;
+}
+
+.balance_box{
+    background: #ff8080;
+    padding: 10px;
+    border-radius: 8px;
+    border-color: #c62828;
+    border: 1px solid #c62828;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Defines two columns: 2 parts wide, 1 part wide */
+    gap: 20px; /* Space between the main columns */
+}
+
+/* Left column stacks the balance box and forms vertically */
+.left_column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right column styles your transaction history card */
+.right_column {
+    background: #f7fcf9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #c62828;
+    height: fit-content;
+}
+
+/* When the screen width is 768px or narrower (tablets and mobile phones) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* Changes from 2 columns to a single stacked column */
+    }
 }
